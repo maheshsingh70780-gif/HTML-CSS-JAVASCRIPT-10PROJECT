@@ -1,15 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
 }
-html,
-body {
-  font-family: "Oswald", sans-serif;
-}
-
 .background {
   background-image: url("./images/mountain.jpg");
   height: 100vh;
@@ -23,55 +18,84 @@ body {
   place-items: center;
   height: 100vh;
 }
-.container h1 {
-  font-size: 4rem;
+
+body{
+background:#111827;
+color:white;
 }
 
-.settings {
-  position: absolute;
-  bottom: 30px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.settings .fa-cog {
-  font-size: 3rem;
-  color: white;
-}
-.settings-content {
-  display: flex;
-  gap: 1rem;
-}
-.settings-content input {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-}
-.settings-content button {
-  padding: 0.5rem 1rem;
-  background-color: green;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  color: white;
-}
-.hide {
-  display: none;
+.background{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
 }
 
-.time-container {
-  margin-top: 1rem;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
+.container{
+margin-bottom:30px;
 }
-.time-container h2 {
-  line-height: 60px;
-  text-align: center;
-  font-size: 3rem;
+
+.time-container{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:30px;
 }
-.time-container div {
-  font-size: 4rem;
-  color: white;
+
+.box{
+background:#1f2937;
+padding:20px;
+border-radius:10px;
+width:110px;
+box-shadow:0 0 10px rgba(0,0,0,.3);
+}
+
+.box span{
+font-size:35px;
+font-weight:bold;
+display:block;
+margin-bottom:10px;
+}
+
+.settings{
+position:fixed;
+bottom:20px;
+right:20px;
+}
+
+#settingIcon{
+font-size:35px;
+cursor:pointer;
+}
+
+.settings-content{
+margin-top:15px;
+display:flex;
+flex-direction:column;
+gap:10px;
+background:white;
+padding:15px;
+border-radius:10px;
+}
+
+.settings-content input{
+padding:10px;
+font-size:16px;
+}
+
+.settings-content button{
+padding:10px;
+border:none;
+background:#2563eb;
+color:white;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.hide{
+display:none;
 }
