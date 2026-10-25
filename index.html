@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mahesh Singh | My Projects</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: #1e293b;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        header h1 span {
+            color: #38bdf8;
+        }
+
+        header p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(220px, 1fr)
+            );
+            gap: 22px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            background: #0369a1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #cbd5e1;
+            background: #1e293b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Mahesh <span>Singh</span></h1>
+        <p>HTML | CSS | JavaScript</p>
+        <p>Welcome to My Projects Gallery 🚀</p>
+    </header>
+
+    <main class="container">
+        <h2>My Projects</h2>
+
+        <div class="projects" id="projects"></div>
+    </main>
+
+    <footer>
+        <p>Created by Mahesh Singh | © 2026</p>
+    </footer>
+
+    <script>
+        const projectNames = [
+            "project1",
+            "project2",
+            "project3",
+            "project4.1",
+            "project4.2",
+            "project5",
+            "project6",
+            "project7",
+            "project8.1",
+            "project8.2",
+            "project8.3",
+            "project9",
+            "project10"
+        ];
+
+        const projectContainer =
+            document.getElementById("projects");
+
+        projectNames.forEach((name, index) => {
+            const card = document.createElement("div");
+            card.className = "card";
+
+            card.innerHTML = `
+                <h3>${name.toUpperCase()}</h3>
+                <p>HTML, CSS & JavaScript Project</p>
+                <a href="./${name}/" target="_blank">
+                    Live Demo ↗
+                </a>
+            `;
+
+            projectContainer.appendChild(card);
+        });
+    </script>
+
+</body>
+</html>
